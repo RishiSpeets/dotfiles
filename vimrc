@@ -3,6 +3,7 @@
 "" =====================================
 
 call plug#begin("~/.vim/plugged")
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
@@ -17,12 +18,20 @@ call plug#end()
 "" =====================================
 "" Look & Feel
 "" =====================================
+" powerline
+set rtp+=/Users/rspeets/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+set laststatus=2
+set t_Co=256
+
 
 " Mappings MOVE THIS SOMEWHERE ELSE
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Remap for search inside files
+nmap <Leader>a :Ag<Space>
 
 " More natural split movements
 set splitbelow
@@ -32,8 +41,9 @@ set splitright
 set t_md=
 
 " Theme options
-colorscheme gruvbox
-set background=dark
+let &t_Co=256
+colorscheme PaperColor
+set background=light
 
 " ALE sign warning
 let g:ale_sign_error = '❌'
