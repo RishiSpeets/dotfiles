@@ -43,7 +43,7 @@ set t_md=
 " Theme options
 let &t_Co=256
 colorscheme PaperColor
-set background=light
+set background=dark
 
 " ALE sign warning
 let g:ale_sign_error = '❌'
